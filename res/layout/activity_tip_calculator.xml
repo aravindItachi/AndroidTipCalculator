@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/tip3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBottom="@+id/tip1"
+        android:layout_toRightOf="@+id/tip2"
+        android:onClick="tipPercClicked"
+        android:text="@string/twentyperc" />
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Enter the amount ...."
+        android:inputType="numberDecimal"
+        android:text="@string/totalamount" />
+
+    <Button
+        android:id="@+id/tip1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/amount"
+        android:layout_marginTop="51dp"
+        android:onClick="tipPercClicked"
+        android:text="@string/tenperc" />
+
+    <Button
+        android:id="@+id/tip2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/finaltip"
+        android:layout_toRightOf="@+id/tip1"
+        android:onClick="tipPercClicked"
+        android:text="@string/fifteenperc" />
+
+    <TextView
+        android:id="@+id/finaltip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tip3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="42dp"
+        android:hint="@string/tipamt"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
